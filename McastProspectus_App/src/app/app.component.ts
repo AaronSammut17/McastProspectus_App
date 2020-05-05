@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   public appPages = [
     {
       title: 'About',
-      url: '/prospectu/About',
+      url: '/prospectus/About',
       icon: 'mail'
     },
     {

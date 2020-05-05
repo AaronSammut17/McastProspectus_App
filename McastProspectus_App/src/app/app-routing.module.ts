@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'prospectus/home',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'about',
     loadChildren: () => import('./prospectus/about/about.module').then( m => m.AboutPageModule)
+  },
+  {
+    path: 'institutes',
+    loadChildren: () => import('./prospectus/institutes/institutes.module').then( m => m.InstitutesPageModule)
   }
 ];
 
