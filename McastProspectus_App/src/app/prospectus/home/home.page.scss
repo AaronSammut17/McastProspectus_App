@@ -1,0 +1,32 @@
+h1{
+    font-size: 2rem;
+    padding: 0.5rem 0;
+    position: relative;
+    width: 100%;
+}
+
+h1:after{
+    border-top: 3px solid var(--ion-color-primary);
+    bottom: 0;
+    content: '';
+    left: 0;
+    width: 30%;
+    position: absolute;
+    
+}
+
+h4{
+    padding: 0.5rem 0;
+    position: relative;
+    width: 100%;
+}
+
+h4:after{
+    border-top: 3px solid var(--ion-color-primary);
+    bottom: 0;
+    content: '';
+    left: 0;
+    width: 40%;
+    position: absolute;
+    
+}
