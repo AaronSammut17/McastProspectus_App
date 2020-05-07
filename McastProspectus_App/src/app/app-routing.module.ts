@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'prospectus',
     pathMatch: 'full'
   },
   {
@@ -20,36 +20,28 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: () => import('./prospectus/home/home.module').then( m => m.HomePageModule)
-      },
-
-      // http://localhost:4200/prospectus/about
-      {
-        // This is the path nested under /prospectus
-        path: 'prospectus/:url',
-        // This is the module/page that will load when we access this link. 
-        loadChildren: () => import('./prospectus/about/about.module').then( m => m.AboutPageModule)
       }
     ]
   },
   
   {
-    path: 'home',
+    path: 'prospectus/home',
     loadChildren: () => import('./prospectus/home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: 'about',
+    path: 'prospectus/about',
     loadChildren: () => import('./prospectus/about/about.module').then( m => m.AboutPageModule)
   },
   {
-    path: 'institutes',
+    path: 'prospectus/institutes',
     loadChildren: () => import('./prospectus/institutes/institutes.module').then( m => m.InstitutesPageModule)
   },
   {
-    path: 'contact-us',
+    path: 'prospectus/contact-us',
     loadChildren: () => import('./prospectus/contact-us/contact-us.module').then( m => m.ContactUsPageModule)
   },
   {
-    path: 'students-work',
+    path: 'prospectus/students-work',
     loadChildren: () => import('./prospectus/students-work/students-work.module').then( m => m.StudentsWorkPageModule)
   }
 ];

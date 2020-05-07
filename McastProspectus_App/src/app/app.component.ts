@@ -14,26 +14,26 @@ export class AppComponent implements OnInit {
   public appPages = [
     {
       title: 'About',
-      url: '/prospectus/About',
-      icon: 'mail'
-    },
-    {
-      title: 'Institutes',
-      url: '/prospectus/Institutes',
-      icon: 'paper-plane'
+      url: 'prospectus/about',
+      icon: 'information-circle'
     },
     {
       title: 'Students Work',
-      url: '/prospectus/StudentsWork',
-      icon: 'heart'
+      url: 'prospectus/students-work',
+      icon: 'brush'
+    },
+    {
+      title: 'Institutes',
+      url: 'prospectus/institutes',
+      icon: 'school'
     },
     {
       title: 'Contact Us',
-      url: '/prospectus/ContactUS',
-      icon: 'archive'
+      url: 'prospectus/contact-us',
+      icon: 'call'
     }
   ];
-  
+   
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -50,7 +50,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    const path = window.location.pathname.split('prospectus/')[1];
+    const path = window.location.pathname.split('/')[1];
     if (path !== undefined) {
       this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
     }

@@ -1,9 +1,43 @@
 <ion-header>
   <ion-toolbar>
+    <!-- ion-buttons will sort the buttons according to slot (start, middle, end). -->
+    <ion-buttons slot="start">
+      <!-- will adapt the styling to fit the toolbar, IF it is in ion-buttons. -->
+      <ion-button (click)="navigate()">
+        <!-- icon-only will make this icon bigger and have a round ripple effect. -->
+        <ion-icon name="chevron-back-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
     <ion-title>coursesList</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
+
+  <!-- implimenting a searchbar so that the user can search a specific course -->
+  <ion-searchbar color="tertiary"></ion-searchbar>
+
+  <!-- ion card that will loop for every course-->
+  <!-- ngFor to loop the card and having different content -->
+  <ion-card color="tertiary" class="course" *ngFor="let i of [1, 2, 3, 4, 5]">
+    <!-- some courses have images -->
+    <img src="./assets/shapes.svg" />
+    <!-- title of the course and subtitle(course number) -->
+    <ion-card-header>
+      <ion-card-subtitle class=subtitle>course number</ion-card-subtitle>
+      <ion-card-title class=title>course title</ion-card-title>
+    </ion-card-header>
+    <!-- short description of the course -->
+    <ion-card-content>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem facere enim aspernatur nulla quasi labore quas eum veniam facilis at, voluptate ab esse ipsam maiores dolores, cum atque, harum officiis!</p>
+      <!-- button that will load all the info of course-->
+      <ion-button color="ica" shape="round" >
+        Read more
+        <ion-icon class="ion-padding" name="arrow-forward-outline"></ion-icon>
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+  
 
 </ion-content>
