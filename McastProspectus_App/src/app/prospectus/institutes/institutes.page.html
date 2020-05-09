@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="tertiary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -11,16 +11,17 @@
   <div class="ion-padding">
     <!-- Titile -->
     <h1 class="underline">Select the institute</h1>
-
-    <!-- creating the buttons and with there respective colors -->
-    <ion-button color="ias" shape="round" expand="block">Applied Science</ion-button>
-    <ion-button color="ibmc" shape="round" expand="block">Business Management & Commerce</ion-button>
-    <ion-button color="ics" shape="round" expand="block">Community Services</ion-button>
-    <ion-button color="ica" shape="round" expand="block">Creative Arts</ion-button>
-    <ion-button color="iet" shape="round" expand="block">Engineering & Transport</ion-button>
-    <ion-button color="ict" shape="round" expand="block">Information & Communication Technology</ion-button>
-    <ion-button color="gozo" shape="round" expand="block">Gozo Campus</ion-button>
-    <ion-button color="masters" shape="round" expand="block">Masters</ion-button>
+    <!-- This loop will happen to form the buttons of institutes -->
+    <ion-list *ngFor="let x of institutes; let i = index">
+      <!-- When a button is clicked it will be directed to the courseList-->
+        <ion-button (click)="selectedIndex = i" 
+                    routerDirection="root" 
+                    [routerLink]="[x.url]"
+                    [class.selected]="selectedIndex == i"
+                    [color]="x.code" 
+                    shape="round" 
+                    expand="block">{{ x.title }}</ion-button>
+    </ion-list>
   </div>
 
 </ion-content>

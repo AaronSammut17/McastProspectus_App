@@ -14,14 +14,11 @@ h1:after{
     position: absolute;
     
 }
-
-
-ion-button{
-    height: 46px;
-    
-    outline-width: medium;
-    outline-color: green($color: #dbd9d9);
-    
-    margin: 1.2rem;
-    font-size: 16px;
-}
+ion-list {
+    background: var(--ion-color-secondary, var(--ion-color-secondary, --ion-color-secondary));
+    padding-top: 0;
+    ion-button{
+        height: 46px;   
+        font-size: 16px;
+    }
+  }

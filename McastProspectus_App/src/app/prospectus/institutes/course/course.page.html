@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <!-- ion-buttons will sort the buttons according to slot (start, middle, end). -->
+    <ion-buttons slot="start">
+      <!-- will adapt the styling to fit the toolbar, IF it is in ion-buttons. -->
+      <ion-button (click)="navigate()">
+        <!-- icon-only will make this icon bigger and have a round ripple effect. -->
+        <ion-icon name="chevron-back-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>courses</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="tertiary">
+  <ion-slides pager={true} >
+
+    <!-- the first slide -->
+    <ion-slide>
+      <div class="slide1">
+        <h1 class="underline">Course Title</h1>
+        <h4>About</h4>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit maiores ut sequi tempora ea amet quibusdam enim expedita qui fugiat quisquam cumque, eligendi aliquid error, velit blanditiis porro perspiciatis repellat!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit maiores ut sequi tempora ea amet quibusdam enim expedita qui fugiat quisquam cumque, eligendi aliquid error, velit blanditiis porro perspiciatis repellat!</p>
+      </div>
+    </ion-slide>
+
+    <!-- the second slide -->
+    <ion-slide>
+      <div class="slide2">
+        <h4>About</h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, maxime! Cupiditate optio rerum iusto adipisci, vero quaerat ab asperiores facere expedita commodi earum quo est quidem esse illo, voluptates doloribus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit maiores ut sequi tempora ea amet quibusdam enim expedita qui fugiat quisquam cumque, eligendi aliquid error, velit blanditiis porro perspiciatis repellat!</p>
+        <img src="./assets/shapes.svg"/>
+      </div>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>
