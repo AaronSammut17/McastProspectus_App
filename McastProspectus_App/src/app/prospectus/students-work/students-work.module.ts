@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { StudentsWorkPageRoutingModule } from './students-work-routing.module';
 
 import { StudentsWorkPage } from './students-work.page';
+import { SharedComponentsModule } from 'src/app/modules/shared-components/shared-components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    StudentsWorkPageRoutingModule
+    StudentsWorkPageRoutingModule,
+    SharedComponentsModule
   ],
   declarations: [StudentsWorkPage]
 })

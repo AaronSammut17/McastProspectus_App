@@ -1,27 +1,61 @@
-h1{
+ion-slides {
+    height: 100%;
+  }
+  
+  h1 {
     font-size: 2rem;
-    font-weight: bold;
-    padding: 0.5rem 0;
+    padding: 0.5rem 2.5rem;
     position: relative;
+    text-align: left;
     width: 100%;
-}
+  }
+  
+  h3 {
+    padding: 0.5rem 2.5rem;
+    position: relative;
+    text-align: left;
+    width: 100%;
+  }
+  
+  h5 {
+    margin-bottom: 0;
+    padding: 0.2rem 2.5rem;
+    position: relative;
+    text-align: left;
+    width: 100%;
+  }
 
-h1:after{
+  h1:after{
     border-top: 3px solid var(--ion-color-primary);
     bottom: 0;
     content: '';
-    left: 0;
+    left: 2.5rem;
     width: 70%;
+    position: absolute; 
+  }
+  
+  h3:after{
+    border-top: 3px solid var(--ion-color-primary);
+    bottom: 0;
+    content: '';
+    left: 2.5rem;
+    width: 30%;
     position: absolute;
     
-}
+  }
+  
+  div{
+    margin:0;
 
-.buttons{
-    padding-top: 4rem;
-    
-    ion-button{
-        height: 46px;
-        margin: 1.2rem;
-        font-size: 16px;
-    }
-}
+  }
+  
+  .description{
+      margin-bottom: 4rem;
+  }
+  p {
+    margin-top: 0;
+    padding: 0 40px;
+    font-size: 16px;
+    text-align: left;
+    line-height: 1.5;
+  }

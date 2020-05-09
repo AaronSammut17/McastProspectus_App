@@ -1,25 +1,22 @@
-<ion-header>
-  <ion-toolbar color="tertiary">
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>Contact Us</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header></app-header>
 
 <ion-content color="tertiary">
-  <div class="ion-padding">
-    <!-- Titile -->
-    <h1 class="underline">We are here for you</h1>
+    <ion-slides pager={true} >
 
-    <div class="buttons">
-      <!-- creating the buttons -->
-      <ion-button shape="round" expand="block">Agenzija Zghazagh youth club</ion-button>
-      <ion-button shape="round" expand="block">Grievance Ofiice</ion-button>
-      <ion-button shape="round" expand="block">Support</ion-button>
-      <ion-button shape="round" expand="block">Corporate Services</ion-button>
-      <ion-button shape="round" expand="block">Kunsill Studenti MCAST</ion-button>
-    </div>
-  </div>
+      <!-- the ngfor will create the slide for every contact info -->
+      <ion-slide *ngFor="let i of [1, 2, 3, 4, 5]">
+        <div class="slide1">
+          <h1 class="underline">We are here for you</h1>
+          <h3>subtitle</h3>
+          <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur deleniti ab est provident mollitia possimus, cumque minus unde necessitatibus accusamus? Cumque eos, tempora accusantium corrupti eligendi officiis nesciunt dicta qui.</p>
+          <h5>Email: </h5>
+          <p>email </p>
+          <h5>Tel: </h5>
 
+          <!-- when the user clicks on the number it will call the number -->
+          <p (click)="callNumber()" >number</p>
+        </div>
+      </ion-slide> 
+
+    </ion-slides>
 </ion-content>
