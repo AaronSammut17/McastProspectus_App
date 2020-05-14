@@ -5,15 +5,13 @@
     <!-- Titile -->
     <h1 class="underline">Select the institute</h1>
     <!-- This loop will happen to form the buttons of institutes -->
-    <ion-list *ngFor="let x of institutes; let i = index">
+    <ion-list>
       <!-- When a button is clicked it will be directed to the courseList-->
-        <ion-button (click)="selectedIndex = i" 
-                    routerDirection="root" 
-                    [routerLink]="[x.url]"
-                    [class.selected]="selectedIndex == i"
-                    [color]="x.code" 
-                    shape="round" 
-                    expand="block">{{ x.title }}</ion-button>
+        <ion-item button
+                    *ngFor="let institute of institutes"
+                    [ngStyle]="{ 'border-color': institute.$.color }"
+                    [routerLink]="['courses-list', institute.$.url]"
+                    expand="block">{{ prospectusService.getInstituteName(institute) }}</ion-item>
     </ion-list>
   </div>
 

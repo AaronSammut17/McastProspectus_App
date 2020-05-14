@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { ProspectusService } from './services/prospectus.service';
 
 @Component({
   selector: 'app-root',
@@ -10,32 +11,33 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 
+// impliments OnInit will force the initialization function to work.
 export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
     {
       title: 'Home',
-      url: 'prospectus/home',
+      url: 'home',
       icon: 'home'
     },
     {
       title: 'About',
-      url: 'prospectus/about',
+      url: 'about',
       icon: 'information-circle'
     },
     {
       title: 'Students Work',
-      url: 'prospectus/students-work',
+      url: 'students-work',
       icon: 'brush'
     },
     {
       title: 'Institutes',
-      url: 'prospectus/institutes',
+      url: 'institutes',
       icon: 'school'
     },
     {
       title: 'Contact Us',
-      url: 'prospectus/contact-us',
+      url: 'contact-us',
       icon: 'call'
     }
   ];
@@ -43,7 +45,9 @@ export class AppComponent implements OnInit {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+
+    private prospectusSercive: ProspectusService
   ) {
     this.initializeApp();
   }
@@ -55,7 +59,12 @@ export class AppComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
+  async ngOnInit() {
+    // Always load the information first.
+    await this.prospectusSercive.preload();
+
+    // All the rest of the code you need goes below this line!
+    // this is for the sidemenu
     const path = window.location.pathname.split('/')[1];
     if (path !== undefined) {
       this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());

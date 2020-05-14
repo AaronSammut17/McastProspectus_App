@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { ProspectusService } from 'src/app/services/prospectus.service';
 
 @Component({
   selector: 'app-courses-list',
@@ -13,12 +14,22 @@ export class CoursesListPage implements OnInit {
    */
   @Input("backLink") backLink: any = ['/'];
 
+  /**
+  * The institute to be used with this page.
+  */
+  public institute: any =null;
+
   constructor(
+    public route: ActivatedRoute,
+    public prospectusService: ProspectusService,
     public router: Router
   ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
   
+    const code = this.route.snapshot.params.code;
+    this.institute = this.prospectusService.getInstitute(code);
+  }
   /**
   *  Navigates to the back link.
   */

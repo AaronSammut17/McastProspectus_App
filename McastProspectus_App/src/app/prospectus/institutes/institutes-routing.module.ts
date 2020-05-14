@@ -9,11 +9,11 @@ const routes: Routes = [
     component: InstitutesPage
   },
   {
-    path: 'courses-list',
+    path: 'courses-list/:code',
     loadChildren: () => import('./courses-list/courses-list.module').then( m => m.CoursesListPageModule)
   },
   {
-    path: 'course',
+    path: 'course/:code',
     loadChildren: () => import('./course/course.module').then( m => m.CoursePageModule)
   }
 ];

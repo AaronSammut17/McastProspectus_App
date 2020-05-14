@@ -7,10 +7,6 @@ const routes: Routes = [
     redirectTo: 'prospectus',
     pathMatch: 'full'
   },
-  {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
-  },
 
   // The parent page for all prospectus interfaces.
   {
@@ -25,23 +21,23 @@ const routes: Routes = [
   },
   
   {
-    path: 'prospectus/home',
+    path: 'home',
     loadChildren: () => import('./prospectus/home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: 'prospectus/about',
+    path: 'about',
     loadChildren: () => import('./prospectus/about/about.module').then( m => m.AboutPageModule)
   },
   {
-    path: 'prospectus/institutes',
+    path: 'institutes',
     loadChildren: () => import('./prospectus/institutes/institutes.module').then( m => m.InstitutesPageModule)
   },
   {
-    path: 'prospectus/contact-us',
+    path: 'contact-us',
     loadChildren: () => import('./prospectus/contact-us/contact-us.module').then( m => m.ContactUsPageModule)
   },
   {
-    path: 'prospectus/students-work',
+    path: 'students-work',
     loadChildren: () => import('./prospectus/students-work/students-work.module').then( m => m.StudentsWorkPageModule)
   }
 ];

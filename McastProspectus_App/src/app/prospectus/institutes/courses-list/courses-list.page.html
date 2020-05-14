@@ -2,6 +2,7 @@
   <ion-toolbar color="tertiary">
     <!-- ion-buttons will sort the buttons according to slot (start, middle, end). -->
     <ion-buttons slot="start">
+      <ion-back-button defaultHref="/institutes" icon="chevron-back-outline" text=""></ion-back-button>
       <!-- will adapt the styling to fit the toolbar, IF it is in ion-buttons. -->
       <ion-button (click)="navigate()">
         <!-- icon-only will make this icon bigger and have a round ripple effect. -->
@@ -32,7 +33,7 @@
     <ion-card-content>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem facere enim aspernatur nulla quasi labore quas eum veniam facilis at, voluptate ab esse ipsam maiores dolores, cum atque, harum officiis!</p>
       <!-- button that will load all the info of course-->
-      <ion-button color="ica" shape="round" >
+      <ion-button color="ica" shape="round" [routerLink]="['/institutes', 'course', 'hello']">
         Read more
         <ion-icon class="ion-padding" name="arrow-forward-outline"></ion-icon>
       </ion-button>
