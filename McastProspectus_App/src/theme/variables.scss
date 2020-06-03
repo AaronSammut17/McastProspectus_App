@@ -28,6 +28,14 @@
   --ion-color-tertiary-tint: #ffffff;
 
   /** Institutes colors**/
+  /** Other Courses **/
+  --ion-color-oc: #ffffff;
+  --ion-color-oc-rgb: 255,255,255;
+  --ion-color-oc-contrast: #000000;
+  --ion-color-oc-contrast-rgb: 0,0,0;
+  --ion-color-oc-shade: #e0e0e0;
+  --ion-color-oc-tint: #ffffff;
+
   /** Aplied Science **/
   --ion-color-ias: #5DA733;
   --ion-color-ias-rgb: 93,167,51;
@@ -69,31 +77,56 @@
   --ion-color-iet-tint: #2766bc;
 
   /** Information & Communication Technology **/
-  --ion-color-ict: #E96C24;
-  --ion-color-ict-rgb: 233,108,36;
-  --ion-color-ict-contrast: #000000;
-  --ion-color-ict-contrast-rgb: 0,0,0;
-  --ion-color-ict-shade: #cd5f20;
-  --ion-color-ict-tint: #eb7b3a;
+  --ion-color-iict: #E96C24;
+  --ion-color-iict-rgb: 233,108,36;
+  --ion-color-iict-contrast: #000000;
+  --ion-color-iict-contrast-rgb: 0,0,0;
+  --ion-color-iict-shade: #cd5f20;
+  --ion-color-iict-tint: #eb7b3a;
+
+  /** General Degrees **/
+  --ion-color-gd: #000000;
+  --ion-color-gd-rgb: 0,0,0;
+  --ion-color-gd-contrast: #ffffff;
+  --ion-color-gd-contrast-rgb: 255,255,255;
+  --ion-color-gd-shade: #000000;
+  --ion-color-gd-tint: #1a1a1a;
   
   /** Gozo Campus **/
-  --ion-color-gozo: #1ABCEE;
-  --ion-color-gozo-rgb: 26,188,238;
-  --ion-color-gozo-contrast: #000000;
-  --ion-color-gozo-contrast-rgb: 0,0,0;
-  --ion-color-gozo-shade: #17a5d1;
-  --ion-color-gozo-tint: #31c3f0;
+  --ion-color-gc: #1ABCEE;
+  --ion-color-gc-rgb: 26,188,238;
+  --ion-color-gc-contrast: #000000;
+  --ion-color-gc-contrast-rgb: 0,0,0;
+  --ion-color-gc-shade: #17a5d1;
+  --ion-color-gc-tint: #31c3f0;
 
   /** Masters **/
-  --ion-color-masters: #9337A0;
-  --ion-color-masters-rgb: 147,55,160;
-  --ion-color-masters-contrast: #ffffff;
-  --ion-color-masters-contrast-rgb: 255,255,255;
-  --ion-color-masters-shade: #81308d;
-  --ion-color-masters-tint: #9e4baa;
+  --ion-color-md: #9337A0;
+  --ion-color-md-rgb: 147,55,160;
+  --ion-color-md-contrast: #ffffff;
+  --ion-color-md-contrast-rgb: 255,255,255;
+  --ion-color-md-shade: #81308d;
+  --ion-color-md-tint: #9e4baa;
+
+  /** CPD **/
+  --ion-color-cpd: #000000;
+  --ion-color-cpd-rgb: 0,0,0;
+  --ion-color-cpd-contrast: #ffffff;
+  --ion-color-cpd-contrast-rgb: 255,255,255;
+  --ion-color-cpd-shade: #000000;
+  --ion-color-cpd-tint: #1a1a1a;
 }
 
 /** defining the new colors **/
+.ion-color-oc {
+  --ion-color-base: var(--ion-color-oc);
+  --ion-color-base-rgb: var(--ion-color-oc-rgb);
+  --ion-color-contrast: var(--ion-color-oc-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-oc-contrast-rgb);
+  --ion-color-shade: var(--ion-color-oc-shade);
+  --ion-color-tint: var(--ion-color-oc-tint);
+}
+
 .ion-color-ias {
   --ion-color-base: var(--ion-color-ias);
   --ion-color-base-rgb: var(--ion-color-ias-rgb);
@@ -139,31 +172,49 @@
   --ion-color-tint: var(--ion-color-iet-tint);
 }
 
-.ion-color-ict {
-  --ion-color-base: var(--ion-color-ict);
-  --ion-color-base-rgb: var(--ion-color-ict-rgb);
-  --ion-color-contrast: var(--ion-color-ict-contrast);
-  --ion-color-contrast-rgb: var(--ion-color-ict-contrast-rgb);
-  --ion-color-shade: var(--ion-color-ict-shade);
-  --ion-color-tint: var(--ion-color-ict-tint);
+.ion-color-iict {
+  --ion-color-base: var(--ion-color-iict);
+  --ion-color-base-rgb: var(--ion-color-iict-rgb);
+  --ion-color-contrast: var(--ion-color-iict-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-iict-contrast-rgb);
+  --ion-color-shade: var(--ion-color-iict-shade);
+  --ion-color-tint: var(--ion-color-iict-tint);
 }
 
-.ion-color-gozo {
-  --ion-color-base: var(--ion-color-gozo);
-  --ion-color-base-rgb: var(--ion-color-gozo-rgb);
-  --ion-color-contrast: var(--ion-color-gozo-contrast);
-  --ion-color-contrast-rgb: var(--ion-color-gozo-contrast-rgb);
-  --ion-color-shade: var(--ion-color-gozo-shade);
-  --ion-color-tint: var(--ion-color-gozo-tint);
+.ion-color-gd {
+  --ion-color-base: var(--ion-color-gd);
+  --ion-color-base-rgb: var(--ion-color-gd-rgb);
+  --ion-color-contrast: var(--ion-color-gd-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-gd-contrast-rgb);
+  --ion-color-shade: var(--ion-color-gd-shade);
+  --ion-color-tint: var(--ion-color-gd-tint);
 }
 
-.ion-color-masters {
-  --ion-color-base: var(--ion-color-masters);
-  --ion-color-base-rgb: var(--ion-color-masters-rgb);
-  --ion-color-contrast: var(--ion-color-masters-contrast);
-  --ion-color-contrast-rgb: var(--ion-color-masters-contrast-rgb);
-  --ion-color-shade: var(--ion-color-masters-shade);
-  --ion-color-tint: var(--ion-color-masters-tint);
+.ion-color-gc {
+  --ion-color-base: var(--ion-color-gc);
+  --ion-color-base-rgb: var(--ion-color-gc-rgb);
+  --ion-color-contrast: var(--ion-color-gc-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-gc-contrast-rgb);
+  --ion-color-shade: var(--ion-color-gc-shade);
+  --ion-color-tint: var(--ion-color-gc-tint);
+}
+
+.ion-color-md {
+  --ion-color-base: var(--ion-color-md);
+  --ion-color-base-rgb: var(--ion-color-md-rgb);
+  --ion-color-contrast: var(--ion-color-md-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-md-contrast-rgb);
+  --ion-color-shade: var(--ion-color-md-shade);
+  --ion-color-tint: var(--ion-color-md-tint);
+}
+
+.ion-color-cpd {
+  --ion-color-base: var(--ion-color-cpd);
+  --ion-color-base-rgb: var(--ion-color-cpd-rgb);
+  --ion-color-contrast: var(--ion-color-cpd-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-cpd-contrast-rgb);
+  --ion-color-shade: var(--ion-color-cpd-shade);
+  --ion-color-tint: var(--ion-color-cpd-tint);
 }
 @media (prefers-color-scheme: dark) {
   /*
@@ -197,69 +248,93 @@
   --ion-color-tertiary-tint: #ffffff;
 
   /** Institutes colors**/
-  /** Aplied Science **/
-  --ion-color-ias: #5DA733;
-  --ion-color-ias-rgb: 93,167,51;
-  --ion-color-ias-contrast: #000000;
-  --ion-color-ias-contrast-rgb: 0,0,0;
-  --ion-color-ias-shade: #52932d;
-  --ion-color-ias-tint: #6db047;
-
-  /** Business Management & Commerce **/
-  --ion-color-ibmc: #DB0642;
-  --ion-color-ibmc-rgb: 219,6,66;
-  --ion-color-ibmc-contrast: #ffffff;
-  --ion-color-ibmc-contrast-rgb: 255,255,255;
-  --ion-color-ibmc-shade: #c1053a;
-  --ion-color-ibmc-tint: #df1f55;
-
-  /** Community Services **/
-  --ion-color-ics: #F4B719;
-  --ion-color-ics-rgb: 244,183,25;
-  --ion-color-ics-contrast: #000000;
-  --ion-color-ics-contrast-rgb: 0,0,0;
-  --ion-color-ics-shade: #d7a116;
-  --ion-color-ics-tint: #f5be30;
-
-  /** Creative Arts **/
-  --ion-color-ica: #CA2F88;
-  --ion-color-ica-rgb: 202,47,136;
-  --ion-color-ica-contrast: #ffffff;
-  --ion-color-ica-contrast-rgb: 255,255,255;
-  --ion-color-ica-shade: #b22978;
-  --ion-color-ica-tint: #cf4494;
-
-  /** Engineering & Transport **/
-  --ion-color-iet: #0F55B5;
-  --ion-color-iet-rgb: 15,85,181;
-  --ion-color-iet-contrast: #ffffff;
-  --ion-color-iet-contrast-rgb: 255,255,255;
-  --ion-color-iet-shade: #0d4b9f;
-  --ion-color-iet-tint: #2766bc;
-
-  /** Information & Communication Technology **/
-  --ion-color-ict: #E96C24;
-  --ion-color-ict-rgb: 233,108,36;
-  --ion-color-ict-contrast: #000000;
-  --ion-color-ict-contrast-rgb: 0,0,0;
-  --ion-color-ict-shade: #cd5f20;
-  --ion-color-ict-tint: #eb7b3a;
+    /** Other Courses **/
+    --ion-color-oc: #ffffff;
+    --ion-color-oc-rgb: 255,255,255;
+    --ion-color-oc-contrast: #000000;
+    --ion-color-oc-contrast-rgb: 0,0,0;
+    --ion-color-oc-shade: #e0e0e0;
+    --ion-color-oc-tint: #ffffff;
   
-  /** Gozo Campus **/
-  --ion-color-gozo: #1ABCEE;
-  --ion-color-gozo-rgb: 26,188,238;
-  --ion-color-gozo-contrast: #000000;
-  --ion-color-gozo-contrast-rgb: 0,0,0;
-  --ion-color-gozo-shade: #17a5d1;
-  --ion-color-gozo-tint: #31c3f0;
-
-  /** Masters **/
-  --ion-color-masters: #9337A0;
-  --ion-color-masters-rgb: 147,55,160;
-  --ion-color-masters-contrast: #ffffff;
-  --ion-color-masters-contrast-rgb: 255,255,255;
-  --ion-color-masters-shade: #81308d;
-  --ion-color-masters-tint: #9e4baa;
+    /** Aplied Science **/
+    --ion-color-ias: #5DA733;
+    --ion-color-ias-rgb: 93,167,51;
+    --ion-color-ias-contrast: #000000;
+    --ion-color-ias-contrast-rgb: 0,0,0;
+    --ion-color-ias-shade: #52932d;
+    --ion-color-ias-tint: #6db047;
+  
+    /** Business Management & Commerce **/
+    --ion-color-ibmc: #DB0642;
+    --ion-color-ibmc-rgb: 219,6,66;
+    --ion-color-ibmc-contrast: #ffffff;
+    --ion-color-ibmc-contrast-rgb: 255,255,255;
+    --ion-color-ibmc-shade: #c1053a;
+    --ion-color-ibmc-tint: #df1f55;
+  
+    /** Community Services **/
+    --ion-color-ics: #F4B719;
+    --ion-color-ics-rgb: 244,183,25;
+    --ion-color-ics-contrast: #000000;
+    --ion-color-ics-contrast-rgb: 0,0,0;
+    --ion-color-ics-shade: #d7a116;
+    --ion-color-ics-tint: #f5be30;
+  
+    /** Creative Arts **/
+    --ion-color-ica: #CA2F88;
+    --ion-color-ica-rgb: 202,47,136;
+    --ion-color-ica-contrast: #ffffff;
+    --ion-color-ica-contrast-rgb: 255,255,255;
+    --ion-color-ica-shade: #b22978;
+    --ion-color-ica-tint: #cf4494;
+  
+    /** Engineering & Transport **/
+    --ion-color-iet: #0F55B5;
+    --ion-color-iet-rgb: 15,85,181;
+    --ion-color-iet-contrast: #ffffff;
+    --ion-color-iet-contrast-rgb: 255,255,255;
+    --ion-color-iet-shade: #0d4b9f;
+    --ion-color-iet-tint: #2766bc;
+  
+    /** Information & Communication Technology **/
+    --ion-color-iict: #E96C24;
+    --ion-color-iict-rgb: 233,108,36;
+    --ion-color-iict-contrast: #000000;
+    --ion-color-iict-contrast-rgb: 0,0,0;
+    --ion-color-iict-shade: #cd5f20;
+    --ion-color-iict-tint: #eb7b3a;
+  
+    /** General Degrees **/
+    --ion-color-gd: #000000;
+    --ion-color-gd-rgb: 0,0,0;
+    --ion-color-gd-contrast: #ffffff;
+    --ion-color-gd-contrast-rgb: 255,255,255;
+    --ion-color-gd-shade: #000000;
+    --ion-color-gd-tint: #1a1a1a;
+    
+    /** Gozo Campus **/
+    --ion-color-gc: #1ABCEE;
+    --ion-color-gc-rgb: 26,188,238;
+    --ion-color-gc-contrast: #000000;
+    --ion-color-gc-contrast-rgb: 0,0,0;
+    --ion-color-gc-shade: #17a5d1;
+    --ion-color-gc-tint: #31c3f0;
+  
+    /** Masters **/
+    --ion-color-md: #9337A0;
+    --ion-color-md-rgb: 147,55,160;
+    --ion-color-md-contrast: #ffffff;
+    --ion-color-md-contrast-rgb: 255,255,255;
+    --ion-color-md-shade: #81308d;
+    --ion-color-md-tint: #9e4baa;
+  
+    /** CPD **/
+    --ion-color-cpd: #000000;
+    --ion-color-cpd-rgb: 0,0,0;
+    --ion-color-cpd-contrast: #ffffff;
+    --ion-color-cpd-contrast-rgb: 255,255,255;
+    --ion-color-cpd-shade: #000000;
+    --ion-color-cpd-tint: #1a1a1a;
 }
 
 

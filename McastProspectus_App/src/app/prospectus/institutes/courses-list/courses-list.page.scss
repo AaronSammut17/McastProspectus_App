@@ -2,13 +2,13 @@
     margin-bottom: 2rem;
 }
 .subtitle{
-    color: var(--ion-color-ica);
-    font-size: 1.3rem;
+
+    font-size: 1rem;
     font-weight: bold;
 
 }
 .title{
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     padding: 0rem 0;
     position: relative;
@@ -16,7 +16,7 @@
 }
 
 .title:after{
-    border-top: 3px solid var(--ion-color-ica);
+    border-top: 3px solid var(--ion-color-secondary);
     bottom: 0;
     content: '';
     left: 0;

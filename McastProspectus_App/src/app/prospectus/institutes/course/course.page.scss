@@ -11,15 +11,17 @@ ion-slides {
   }
   
   h4 {
-    color: var(--ion-color-primary);
+
+    margin-bottom: 0;
     padding: 0.5rem 2.5rem;
     position: relative;
     text-align: left;
     width: 100%;
+    
   }
   
   h1:after{
-    border-top: 3px solid var(--ion-color-primary);
+    border-top: 3px solid ;
     bottom: 0;
     content: '';
     left: 2.5rem;
@@ -32,6 +34,7 @@ ion-slides {
   }
   
   p {
+    margin: 0;
     padding: 0 40px;
     font-size: 16px;
     text-align: left;

@@ -9,9 +9,9 @@
       <!-- When a button is clicked it will be directed to the courseList-->
         <ion-item button
                     *ngFor="let institute of institutes"
-                    [ngStyle]="{ 'border-color': institute.$.color }"
-                    [routerLink]="['courses-list', institute.$.url]"
-                    expand="block">{{ prospectusService.getInstituteName(institute) }}</ion-item>
+                    [color]="institute.code"
+                    [routerLink]="['courses-list', institute.code]"
+                    expand="block">{{ institute.name_en }}</ion-item>
     </ion-list>
   </div>
 

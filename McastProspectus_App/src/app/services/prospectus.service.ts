@@ -24,19 +24,19 @@ export class ProspectusService {
    */
   public async preload(){
     
-    await this.http.get('/assets/data.xml', {
+    await this.http.get('/assets/data.json', {
         headers: new HttpHeaders()
-            .set('Content-Type', 'text/xml')
-            .append('Access-Control-Allow-Origin', '*')
+            .set('Access-Control-Allow-Origin', '*')
             .append('Access-Control-Allow-Methods', 'GET')
-            .append('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Access-Control-Allow-Origin, Access-Control-Request-Method'),
-        responseType: 'text'
+            .append('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Access-Control-Allow-Origin, Access-Control-Request-Method')
 
     })
         .toPromise()
         .then(
           // Success
-          (content: string) => this.parseData(content),
+          (content: string) => {
+            this._data = content;
+          },
 
           // Failure
           error => {
@@ -46,35 +46,12 @@ export class ProspectusService {
   }
 
   /**
-  * Interprets the XML information into JSON (so the app understands the data).
-  * @param content The XML data as a string.
-  */
-  private parseData(content: string){
-
-    xml2js.parseString(content, {
-      attrKey: 'attr',
-      trim: true
-    }, (error, result) => {
-          // check for errors first so we can stop the process if something happens.
-          if (error != null)
-          {
-            console.error(error);
-            return;
-          }
-
-          // Successful process goes here.
-          this._data = result.prospectus;
-          console.log(this._data);
-    });
-  }
-
-  /**
   * Will retrieve one institute from the list.
   * @param code The institute code.
   */
   public getInstitute(code: string): any
   {
-    return this._data.institute.find(i => i.$.url == code);
+    return this._data.find(i => i.code == code);
   }
 
   /**
@@ -83,14 +60,30 @@ export class ProspectusService {
   * @param lang [OPTIONAL] The language with which to retrieve the information.
   */
   public getInstituteName(institute: any, lang: string = 'en'): string {
-    const info = institute.info[0].name.find(name => name.$.lang == lang);
-    return info._;
+    
+    return (lang == 'en') ? institute.name_en : institute.name_mt;
   }
 
   /**
   * Look for and return the institutes list.
   */
   public getInstitutes(): any[] {
-    return this._data.institute;
+    return this._data;
+  }
+
+  /**
+  * Will retrieve one course from the list.
+  * @param code The course code.
+  */
+ public getCourses(code: any): any
+ {
+    // first, find the institute containing the required course
+    const institute = this._data.find(i => i.courses.find(c => c.code == code));
+    
+    // then, get the course from the same institute
+    // information is layered, that is why this is needed:
+    const course = institute.courses.find(c => c.code == code);
+
+    return course;
   }
 }

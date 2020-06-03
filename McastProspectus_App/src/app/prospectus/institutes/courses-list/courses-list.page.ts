@@ -29,6 +29,7 @@ export class CoursesListPage implements OnInit {
   
     const code = this.route.snapshot.params.code;
     this.institute = this.prospectusService.getInstitute(code);
+    
   }
   /**
   *  Navigates to the back link.
@@ -38,5 +39,4 @@ export class CoursesListPage implements OnInit {
     // Will also make sure that the URL doesn't become a part of the browser history.
     this.router.navigateByUrl(this.backLink, { replaceUrl: true });
   }
-
 }

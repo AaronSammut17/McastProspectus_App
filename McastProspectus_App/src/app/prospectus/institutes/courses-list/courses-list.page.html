@@ -3,37 +3,30 @@
     <!-- ion-buttons will sort the buttons according to slot (start, middle, end). -->
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/institutes" icon="chevron-back-outline" text=""></ion-back-button>
-      <!-- will adapt the styling to fit the toolbar, IF it is in ion-buttons. -->
-      <ion-button (click)="navigate()">
-        <!-- icon-only will make this icon bigger and have a round ripple effect. -->
-        <ion-icon name="chevron-back-outline" slot="icon-only"></ion-icon>
-      </ion-button>
     </ion-buttons>
 
-    <ion-title>coursesList</ion-title>
+    <ion-title color="secondary">{{ institute.code }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
-
-  <!-- implimenting a searchbar so that the user can search a specific course -->
-  <ion-searchbar color="tertiary"></ion-searchbar>
+<ion-content [color]="institute.code" class="ion-padding">
 
   <!-- ion card that will loop for every course-->
   <!-- ngFor to loop the card and having different content -->
-  <ion-card color="tertiary" class="course" *ngFor="let i of [1, 2, 3, 4, 5]">
+  <ion-card color="tertiary" class="course" *ngFor="let course of institute.courses">
     <!-- some courses have images -->
     <img src="./assets/shapes.svg" />
     <!-- title of the course and subtitle(course number) -->
     <ion-card-header>
-      <ion-card-subtitle class=subtitle>course number</ion-card-subtitle>
-      <ion-card-title class=title>course title</ion-card-title>
+      <ion-card-subtitle [ngStyle]="{ 'color': institute.code }" class=subtitle>{{ course.code }}</ion-card-subtitle>
+      <ion-card-title class=title>{{ course.title }}</ion-card-title>
     </ion-card-header>
+    
     <!-- short description of the course -->
     <ion-card-content>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem facere enim aspernatur nulla quasi labore quas eum veniam facilis at, voluptate ab esse ipsam maiores dolores, cum atque, harum officiis!</p>
+      <p>{{ course.desc_en }}</p>
       <!-- button that will load all the info of course-->
-      <ion-button color="ica" shape="round" [routerLink]="['/institutes', 'course', 'hello']">
+      <ion-button [color]="institute.code" shape="round" [routerLink]="['/institutes', 'course', course.code]">
         Read more
         <ion-icon class="ion-padding" name="arrow-forward-outline"></ion-icon>
       </ion-button>
