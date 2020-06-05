@@ -13,7 +13,9 @@ import { ProspectusService } from './services/prospectus.service';
 
 // impliments OnInit will force the initialization function to work.
 export class AppComponent implements OnInit {
+  // index of which page is selected
   public selectedIndex = 0;
+  // the list of pages
   public appPages = [
     {
       title: 'Home',
@@ -65,6 +67,7 @@ export class AppComponent implements OnInit {
 
     // All the rest of the code you need goes below this line!
     // this is for the sidemenu
+    // this will check which pae is selected and it will changes the url path to that page selected.
     const path = window.location.pathname.split('/')[1];
     if (path !== undefined) {
       this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());

@@ -1,6 +1,7 @@
 <ion-header>
   <ion-toolbar color="tertiary">
     <!-- ion-buttons will sort the buttons according to slot (start, middle, end). -->
+    <!-- this button will take the user back to the course list page -->
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/institutes/courses-list" icon="chevron-back-outline" text=""></ion-back-button>
     </ion-buttons>
@@ -13,6 +14,7 @@
   <ion-slides scrollbar={true} >
 
     <!-- the first slide -->
+    <!-- this slide has the title and description of the course -->
     <ion-slide >
       <div class="slide1">
         <h1 class="underline">{{ course.title }}</h1>
@@ -22,6 +24,7 @@
     </ion-slide>
 
     <!-- the second slide -->
+    <!-- this slide has the rest information of the course -->
     <ion-slide >
       <div class="slide2">
         <h4 >MQF Level:</h4>

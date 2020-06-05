@@ -7,6 +7,9 @@
             <h2>Index</h2>
           </ion-list-header>
 
+          <!-- this is the navigation bar -->
+          <!-- it garbes the information from a list to create the pages in the nav bar, -->
+          <!-- then it sees wich one its selected and it sends the user to that url. -->
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
               <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>

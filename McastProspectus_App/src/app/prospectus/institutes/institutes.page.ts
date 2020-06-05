@@ -21,7 +21,7 @@ export class InstitutesPage implements OnInit {
 
   ngOnInit() {
     this.institutes = this.prospectusService.getInstitutes();
-    console.log(this.institutes);
+
   }
 
 }

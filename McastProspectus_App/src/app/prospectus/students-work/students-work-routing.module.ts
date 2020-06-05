@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: StudentsWorkPage
+  },
+  {
+    path: 'gallery',
+    loadChildren: () => import('./gallery/gallery.module').then( m => m.GalleryPageModule)
   }
 ];
 

@@ -3,9 +3,10 @@
 <ion-content color="tertiary">
     <ion-slides pager={true} >
 
-      <!-- the ngfor will create the slide for every contact info -->
+      <!-- the ngfor will create the slide for every contact info that is found in the json file-->
       <ion-slide *ngFor="let i of [1, 2, 3, 4, 5]">
         <div class="slide1">
+          <!-- Title -->
           <h1 class="underline">Title of contact</h1>
           <h3>subtitle</h3>
           <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur deleniti ab est provident mollitia possimus, cumque minus unde necessitatibus accusamus? Cumque eos, tempora accusantium corrupti eligendi officiis nesciunt dicta qui.</p>
